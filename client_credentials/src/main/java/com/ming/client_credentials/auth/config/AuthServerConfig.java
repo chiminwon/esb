@@ -1,5 +1,6 @@
 package com.ming.client_credentials.auth.config;
 
+import com.ming.client_credentials.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,14 +19,13 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 
 @Configuration
 @EnableAuthorizationServer
-public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
+public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
     TokenStore tokenStore;
     @Autowired
     ClientDetailsService clientDetailsService;
 
-    @Bean(name = "authServerTokenServices")
     AuthorizationServerTokenServices authServerTokenServices() {
         DefaultTokenServices services = new DefaultTokenServices();
         services.setClientDetailsService(clientDetailsService);
@@ -45,8 +45,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-                .withClient("integration")
-                .secret(new BCryptPasswordEncoder().encode("123456"))
+                .withClient(Constants.CLIENT_ID)
+                .secret(new BCryptPasswordEncoder().encode(Constants.CLIENT_SECRET))
                 .resourceIds("res1")
                 .authorizedGrantTypes("client_credentials", "refresh_token")
                 .scopes("all");

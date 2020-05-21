@@ -1,0 +1,2 @@
+1.get token from the console
+2.call service with the token
