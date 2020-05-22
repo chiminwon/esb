@@ -23,6 +23,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().formLogin();
+        http
+                .csrf()
+                .disable()
+                .formLogin()
+                .and()
+                .requiresChannel()
+                .antMatchers("**/oauth/*")
+                .requiresSecure() // need https
+//                .and()
+//                .requiresChannel()
+//                .antMatchers("**/**")
+//                .requiresInsecure() // don't need https
+                ;
     }
 }
