@@ -8,6 +8,6 @@ import lombok.Data;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class AddVerReq {
 
-  @JsonProperty("Addr")
+  @JsonProperty("addr")
   private AddressVO addressVO;
 }

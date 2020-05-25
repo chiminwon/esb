@@ -12,27 +12,27 @@ import lombok.Data;
 public class AddressVO {
 
   // 序列化、反序列化时，属性的名称
-  @JsonProperty("Plus4")
+  // @JsonProperty("Plus4")
   private String plus4;
 
-  @JsonProperty("Addr1")
+  // @JsonProperty("Addr1")
   private String addr1;
 
-  @JsonProperty("PostalCode")
+  // @JsonProperty("PostalCode")
   private String postalCode;
 
-  @JsonProperty("City")
+  // @JsonProperty("City")
   private String city;
 
-  @JsonProperty("StateProvCd")
+  // @JsonProperty("StateProvCd")
   private String stateProvCd;
 
-  @JsonProperty("County")
+  // @JsonProperty("County")
   private String county;
 
-  /*    // 为反序列化期间要接受的属性定义一个或多个替代名称，可以与@JsonProperty一起使用
+  /*    // 为反序列化期间要接受的属性定义一个或多个替代名称，可以与// @JsonProperty一起使用
   @JsonAlias({"pass_word", "passWord"})
-  @JsonProperty("pwd")
+  // @JsonProperty("pwd")
   private String password;
 
   //序列化、反序列化时，格式化时间

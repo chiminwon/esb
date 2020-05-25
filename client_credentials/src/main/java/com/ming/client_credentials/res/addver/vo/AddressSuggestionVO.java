@@ -8,33 +8,33 @@ import lombok.Data;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class AddressSuggestionVO {
 
-  @JsonProperty("AddressRange")
+  // @JsonProperty("AddressRange")
   private String addressRange;
 
-  @JsonProperty("PreDirection")
+  // @JsonProperty("PreDirection")
   private String preDirection;
 
-  @JsonProperty("StreetName")
+  // @JsonProperty("StreetName")
   private String streetName;
 
-  @JsonProperty("StreetType")
+  // @JsonProperty("StreetType")
   private String streetType;
 
-  @JsonProperty("SuiteName")
+  // @JsonProperty("SuiteName")
   private String suiteName;
 
-  @JsonProperty("SuiteRange")
+  // @JsonProperty("SuiteRange")
   private String suiteRange;
 
-  @JsonProperty("City")
+  // @JsonProperty("City")
   private String city;
 
-  @JsonProperty("StateProvCd")
+  // @JsonProperty("StateProvCd")
   private String stateProvCd;
 
-  @JsonProperty("PostalCode")
+  // @JsonProperty("PostalCode")
   private String postalCode;
 
-  @JsonProperty("Plus4")
+  // @JsonProperty("Plus4")
   private String plus4;
 }

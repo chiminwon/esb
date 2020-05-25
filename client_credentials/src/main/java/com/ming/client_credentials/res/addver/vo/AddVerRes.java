@@ -10,15 +10,15 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class AddVerRes {
 
-  @JsonProperty("MessageCode")
+  @JsonProperty("messageCode")
   private String messageCode;
 
-  @JsonProperty("Addr")
+  @JsonProperty("addr")
   private AddressVO addressVO;
 
-  @JsonProperty("AddressSuggestions")
+  @JsonProperty("addressSuggestions")
   private List<AddressSuggestionVO> addSugVOList;
 
-  @JsonProperty("ResultCd")
+  @JsonProperty("resultCd")
   private String resultCd;
 }
